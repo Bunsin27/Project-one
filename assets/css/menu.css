@@ -1,0 +1,8 @@
+h5 {
+    color: skyblue;
+}
+.card-title,
+.card-text {
+    color: darkgray;
+    padding-bottom: 0rem;
+}

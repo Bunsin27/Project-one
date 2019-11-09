@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Set the size of the div element that contains the map  */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+    </style>
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+     </script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+     </script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/jquery.min.js"></script>
+     
+     <!-- Styles -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+     <link rel="stylesheet" href="assets/css/styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src='assets/javascript/googleMapsAPI.js'></script>
+</head>
+<!--About Page-->
+
+<body id="bg">
+    <nav class="navbar navbar-light navbar-expand-lg bg-dark py-lg-4 sticky-top" id="mainNav">
+        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">THE
+                CAKES</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html">About
+                            us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a> </li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class='container formsContainer'>
+        <div class="row">
+            <div class='col-md-6'>
+                <div class="card text-white bg-dark mb-3" style="max-width: 50rem;">
+                    <div class="card-header">
+                        <h5 class="card-title">What We Do</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text" style="font-size: 15px;">We offer grand homemade
+                            cookies,
+                            luscious pies, gorgeous
+                            cakes we have a warm atmosphere,
+                            aromas, and irresistible displays,cake
+                            made with
+                            flourless chocolate cake layers and rich chocolate mousse.</p>
+                        <p class="card-text" style="font-size: 15px;">Crusty, crackling baguettes warm from the steaming
+                            oven…
+                            buttery, raisin-filled brioche
+                            shaped in a swirl and drizzled with sweet icing… silky-smooth chocolate cream pie… lemon
+                            curd
+                            cakes filled
+                            with raspberry preserves…
+                            grand
+                            homemade cookies, luscious pies, gorgeous cakes, and sandwiches, soups, salads, and grain
+                            bowls.
+                            Our
+                            business includes morning commuters stopping in for breakfast, area employees and neighbors
+                            enjoying
+                            lunch, friends meeting for coffee and talk, office workers seeking to satisfy their 4pm
+                            sugar
+                            craving,
+                            people picking up bread, salad, or dessert for their evening meal. Along with our quality
+                            product, our
+                            success depends on a well-trained, professional service staff. We strive to be constantly
+                            and
+                            consistently
+                            friendly, attentive, and courteous. We want each customer’s experience to be full of
+                            delight,
+                            and we focus
+                            on all aspects involved: great food, gracious service, warm atmosphere, heady aromas, and
+                            irresistible
+                            displays. We can’t wait to see you!</p>
+                        <a class="btn btn-primary btn-lg" href="menu.html" role="button">Menu</a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6'>
+                <div class="card text-white bg-dark mb-3" style="max-width: 50rem;">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                        <div id="map"></div>
+                        <script async defer
+                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKPn7kM_YFf90twAs2zZshXoF_j_xf48c&callback=initMap">
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Image Containers-->
+
+    <div class="container-fluid text-center bg-grey">
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img style="border:5px groove gold;" src="./assets/images/background1.jpg" width="420px" height="280px"
+                        alt="JavaCake">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img style="border:5px groove gold;" src="./assets/images/background2.jpg" width="420px" height="280px"
+                        alt="JavaCake">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img style="border:5px groove gold;" src="./assets/images/background3.jpg" width="420px" height="280px"
+                        alt="JavaCake">
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <!-- <script src="assets/bootstrap/javascript/bootstrap.min.js"></script> -->
+        <!-- <script src="assets/javascript/bs-animation.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <footer style="background-color: rgb(0, 0, 0);">
+            <div class="container text-center">
+                <p>Copyright ©&nbsp;Brand 2018</p>
+                <div>
+                    <p id="message" style="color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0);">Beyond the
+                        menu,
+                        want something
+                        fancier? Browser hundreds of
+                        our all-time
+                        favorite<span><a href="recipe.html"> Recipes </a></span>to see what make your taste buds
+                        happy. <br>
+                        We'll customize it for you!</p>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
